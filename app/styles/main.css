@@ -1,7 +1,12 @@
 body {
-      background-color: grey;
+      background-color: lightgray;
       font-family: 'Open Sans';
       color: black;
       min-height: 100%;
       padding-bottom: 200px;
   }
+
+.new-room-button{
+    color:maroon;
+    
+}
