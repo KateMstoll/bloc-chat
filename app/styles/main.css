@@ -1,14 +1,45 @@
 body {
-      background-color: lightgray;
+      background-color: #F9F9F9;
       font-family: 'Open Sans';
       color: black;
       min-height: 100%;
       padding-bottom: 200px;
+      width:100%;
   }
+
 
 .new-room-button{
     color:black;
     border: 3px solid black;
     padding: 3px;
+}
+
+.modal-box{
+   position: absolute;
+   top: 0; left: 0; bottom: 0; right: 0;
+   margin: auto;
+   width: 220px;
+   height: 160px;
+   border: 2px solid black;
+   text-align: center;
+   background-color: azure;
+
     
 }
+
+.room-nav{
+    padding: 30px;   
+    
+}
+
+.child{
+    
+}
+
+.chat-section{
+    
+    padding:10px;
+    text-align: center;
+    
+}
+

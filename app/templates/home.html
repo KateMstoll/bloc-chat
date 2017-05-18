@@ -1,10 +1,16 @@
-<section ng-controller="HomeCtrl as home">
-    <div class="navbar">
-        <h1>Bloc Chat</h1>
-        <button class="btn btn-default" type="button" ng-click="home.addRoom()">New Room</button>
-        <div ng-repeat="room in home.rooms">
-            <h3>{{ room.name }}</h3>
-        </div>
-  
+<div class="room-nav">
+    <h1>Bloc Chat</h1>
+    <button type="button" class="btn btn-default" ng-click="home.addRoom()">New Room</button>
+    <div ng-repeat="room in home.rooms">
+        <p class="room-name" ng-click="home.setCurrentRoom(room)">{{ room.name }}</p>
+
     </div>
-</section>
+ </div>
+
+<div class="chat-section">
+    <h3 class = "currentRoom" type="text">{{ home.currentRoom.name }}</h3>
+    <div class="messageContainer" ng-repeat="message in home.messages">
+        <div class="child" type="text">{{ message.username }} {{ message.content }} {{ message.sentAt }} </div>
+      
+    </div>
+</div>
