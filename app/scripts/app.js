@@ -1,45 +1,22 @@
 (function() {
-     function config($locationProvider, $stateProvider) {
-         $locationProvider
-             .html5Mode({
-                 enabled: true,
-                 requireBase: false
-              });
- 
-         $stateProvider
-             .state('home', {
-                 url: '/',
-                 controller: 'HomeCtrl as home',
-                 templateUrl: '/templates/home.html'
-             });
-         
-     }
-     
- function BlocChatCookies($cookies, $uibModal) {
-        var currentUser = $cookies.get('blocChatCurrentUser');
-        console.log(currentUser);
+    function config($stateProvider, $locationProvider) {
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase: false
+            });
         
-        if (!currentUser || currentUser === '') {
-            
-            var modalInstance = $uibModal.open({
-                templateUrl: '/templates/UserModalCtrl.html',
-                controller: 'UserModalCtrl as modalUN',
-                backdrop: 'static',
-                keyboard: false
+        $stateProvider
+            .state('home', {
+                url: '/',
+                controller: 'HomeCtrl as home',
+                templateUrl: '/templates/home.html'
             });
-            
-            modalInstance.result.then(function(username) {
-                this.username = username;
-                $cookies.put('blocChatCurrentUser', this.username);
-                var currentUser = $cookies.get('blocChatCurrentUser');
-                console.log(currentUser);
-            });
-        }
     }
     
     angular
-        .module('blocChat', ['ngCookies', 'ui.bootstrap','ui.router', 'firebase'])
-        .config(config)
-        .run(['$cookies', '$uibModal', BlocChatCookies]);
-    
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
+        .config(config);
 })();
+
+
