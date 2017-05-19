@@ -1,6 +1,19 @@
-.modal-box{
-   
-    text-align: center;
-    
+html {
+    height: 100%;
+    font-size: 100%;
 }
 
+body {
+    background-color: white;
+}
+
+
+.col-md-4{
+    background-color: aliceblue;
+}
+
+.col-md-8{
+    background-color: skyblue;
+    
+    
+}
