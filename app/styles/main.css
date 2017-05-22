@@ -1,19 +1,9 @@
-html {
+html{
     height: 100%;
     font-size: 100%;
 }
 
-body {
-    background-color: white;
+body{
+    background-color:aliceblue;
 }
 
-
-.col-md-4{
-    background-color: aliceblue;
-}
-
-.col-md-8{
-    background-color: skyblue;
-    
-    
-}
