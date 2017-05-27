@@ -4,6 +4,83 @@ html{
 }
 
 body{
-    background-color:aliceblue;
+    background-color:lavenderblush;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
+.sidebar{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width:60%;
+    height:100%;  
+}
+
+.sidebar-header .new-room {
+    margin: 0 10px;
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.sidebar-title{
+	font-size: 50px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+.sidebar .room-name {
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.sidebar .room-name:hover {
+    cursor: pointer;
+}
+
+.messages {
+    position: fixed;
+    top:0px;
+    left: 235px;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    overflow: scroll;
+    
+}
+
+.messages-header{
+    text-align: center;
+}
+
+.messages-body .username {
+    font-weight: bold;
+    padding-left: 10px;
+    
+    
+}
+
+.messages-body .timestamp {
+    text-align: right;
+    padding-right: 100px;
+}
+
+.messages-body .user-message {
+    padding-top: 25 px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+}
+
+.message-field {
+    bottom: 0;
+    padding-left:10px;
+    padding-bottom: 20px;
+    position: fixed;
+}
+
+.message-box {
+    width: 800px;
+}
